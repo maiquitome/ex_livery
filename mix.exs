@@ -22,7 +22,8 @@ defmodule ExLivery.MixProject do
   defp deps do
     [
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:decimal, "~> 2.0"}
+      {:decimal, "~> 2.0"},
+      {:ex_machina, "~> 2.7.0"}
     ]
   end
 end
