@@ -1,4 +1,6 @@
 defmodule ExLivery.Orders.Item do
+  @moduledoc false
+
   @categories [
     :pizza,
     :hamburguer,
@@ -17,7 +19,7 @@ defmodule ExLivery.Orders.Item do
   end
 
   def build(_description, category, _unity_price, _quantity) when category not in @categories do
-    {:error, "Category must be one of these:#{getCategories()}"}
+    {:error, "Category must be one of these:#{get_categories()}"}
   end
 
   def build(_description, _category, _unity_price, quantity) when quantity <= 0 do
@@ -44,5 +46,5 @@ defmodule ExLivery.Orders.Item do
      }}
   end
 
-  defp getCategories(), do: Enum.map(@categories, &" :#{Atom.to_string(&1)}")
+  defp get_categories, do: Enum.map(@categories, &" :#{Atom.to_string(&1)}")
 end
