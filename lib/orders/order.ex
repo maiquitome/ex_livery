@@ -1,4 +1,6 @@
 defmodule ExLivery.Orders.Order do
+  @moduledoc false
+
   alias ExLivery.Orders.Item
   alias ExLivery.Users.User
 
