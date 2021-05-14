@@ -1,4 +1,6 @@
 defmodule ExLivery.Factory do
+  @moduledoc false
+
   use ExMachina
 
   alias ExLivery.Users.User
