@@ -12,7 +12,7 @@ defmodule ExLivery.Users.User do
   @spec build(String, String, String, String, Integer) ::
           {:error, String}
           | {:ok,
-             %ExLivery.Users.User{
+             %__MODULE__{
                address: String,
                age: Integer,
                cpf: String,
@@ -33,6 +33,9 @@ defmodule ExLivery.Users.User do
         email: "maiquitome@gmail.com",
         name: "Maiqui"
       }}
+
+      iex> ExLivery.Users.User.build("Rua das Cerejeiras", "Maiqui", "maiquitome@gmail.com", "123456677", 15)
+      {:error, "Invalid age!"}
 
   """
 
