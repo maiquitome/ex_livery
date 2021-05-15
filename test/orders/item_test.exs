@@ -1,4 +1,6 @@
 defmodule ExLivery.Orders.ItemTest do
+  @moduledoc false
+
   use ExUnit.Case
 
   alias ExLivery.Orders.Item
